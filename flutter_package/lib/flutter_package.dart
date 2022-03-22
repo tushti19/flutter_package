@@ -39,7 +39,7 @@ class BottomCards extends StatefulWidget {
       this.cardTitleColor = Colors.purple,
       this.onTap,
       this.width = 500.0,
-      this.height = 300.0});
+      this.height = 200.0});
   @override
   _BottomCardsState createState() => _BottomCardsState();
 }
@@ -59,36 +59,43 @@ class _BottomCardsState extends State<BottomCards> {
             child: Padding(
               padding: const EdgeInsets.all(12.0),
               child: Column(
+                mainAxisSize: MainAxisSize.min,
                 children: [
-                  Row(
-                    children: <Widget>[
-                      ButtonBar(
-                        children: <Widget>[
-                          Text(
-                            widget.cardTitle!,
-                            style: TextStyle(color: widget.cardTitleColor),
-                          ),
-                          const Spacer(),
-                          IconButton(
-                            icon: Icon(
-                              widget.iconOne,
-                              color: widget.iconOneColor,
+                  SizedBox(
+                    width: widget.width - 30,
+                    child: Row(
+                      mainAxisSize: MainAxisSize.min,
+                      children: <Widget>[
+                        Row(
+                          children: <Widget>[
+                            Text(
+                              widget.cardTitle!,
+                              style: TextStyle(
+                                  color: widget.cardTitleColor,
+                                  fontSize: 17.0,
+                                  fontWeight: FontWeight.bold),
                             ),
-                            onPressed: widget.iconOneOnPressed ?? () {},
-                          ),
-                          IconButton(
-                            icon: Icon(widget.iconTwo,
-                                color: widget.iconTwoColor),
-                            onPressed: widget.iconTwoOnPressed ?? () {},
-                          ),
-                          IconButton(
-                            icon: Icon(widget.iconThree,
-                                color: widget.iconThreeColor),
-                            onPressed: widget.iconThreeOnPressed ?? () {},
-                          ),
-                        ],
-                      )
-                    ],
+                            IconButton(
+                              icon: Icon(
+                                widget.iconOne,
+                                color: widget.iconOneColor,
+                              ),
+                              onPressed: widget.iconOneOnPressed ?? () {},
+                            ),
+                            IconButton(
+                              icon: Icon(widget.iconTwo,
+                                  color: widget.iconTwoColor),
+                              onPressed: widget.iconTwoOnPressed ?? () {},
+                            ),
+                            IconButton(
+                              icon: Icon(widget.iconThree,
+                                  color: widget.iconThreeColor),
+                              onPressed: widget.iconThreeOnPressed ?? () {},
+                            ),
+                          ],
+                        )
+                      ],
+                    ),
                   ),
                   const SizedBox(
                     height: 20.0,
