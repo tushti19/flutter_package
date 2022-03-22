@@ -91,13 +91,13 @@ class _BottomCardsState extends State<BottomCards> {
                 //       ],
                 //     ),
                 //   ),
-                //   const SizedBox(
-                //     height: 20.0,
-                //   ),
-                //   Text(
-                //     widget.cardContent!,
-                //     style: TextStyle(color: widget.cardContentColor),
-                //   ),
+                const SizedBox(
+                  height: 20.0,
+                ),
+                Text(
+                  widget.cardContent!,
+                  style: TextStyle(color: widget.cardContentColor),
+                ),
               ],
             ),
           ),
