@@ -51,7 +51,7 @@ class _BottomCardsState extends State<BottomCards> {
       child: SizedBox(
         width: widget.width,
         height: widget.height,
-        child: Card(
+        child: Container(
           color: widget.cardColor,
           child: InkWell(
             splashColor: Colors.blue.withAlpha(30),
