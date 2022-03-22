@@ -60,34 +60,37 @@ class _BottomCardsState extends State<BottomCards> {
             child: Column(
               mainAxisSize: MainAxisSize.min,
               children: [
-                // SizedBox(
-                //   width: widget.width - 30,
-                //   child: Row(
-                //     mainAxisSize: MainAxisSize.min,
-                //     children: <Widget>[
-                Text(
-                  widget.cardTitle!,
-                  style: TextStyle(
-                      color: widget.cardTitleColor,
-                      fontSize: 17.0,
-                      fontWeight: FontWeight.bold),
-                ),
-                IconButton(
-                  icon: Icon(
-                    widget.iconOne,
-                    color: widget.iconOneColor,
+                SizedBox(
+                  width: widget.width - 30,
+                  child: Row(
+                    mainAxisSize: MainAxisSize.min,
+                    children: <Widget>[
+                      Text(
+                        widget.cardTitle!,
+                        style: TextStyle(
+                            color: widget.cardTitleColor,
+                            fontSize: 17.0,
+                            fontWeight: FontWeight.bold),
+                      ),
+                      IconButton(
+                        icon: Icon(
+                          widget.iconOne,
+                          color: widget.iconOneColor,
+                        ),
+                        onPressed: widget.iconOneOnPressed ?? () {},
+                      ),
+                      IconButton(
+                        icon: Icon(widget.iconTwo, color: widget.iconTwoColor),
+                        onPressed: widget.iconTwoOnPressed ?? () {},
+                      ),
+                      IconButton(
+                        icon: Icon(widget.iconThree,
+                            color: widget.iconThreeColor),
+                        onPressed: widget.iconThreeOnPressed ?? () {},
+                      ),
+                    ],
                   ),
-                  onPressed: widget.iconOneOnPressed ?? () {},
                 ),
-                IconButton(
-                  icon: Icon(widget.iconTwo, color: widget.iconTwoColor),
-                  onPressed: widget.iconTwoOnPressed ?? () {},
-                ),
-                IconButton(
-                  icon: Icon(widget.iconThree, color: widget.iconThreeColor),
-                  onPressed: widget.iconThreeOnPressed ?? () {},
-                ),
-
                 const SizedBox(
                   height: 20.0,
                 ),
